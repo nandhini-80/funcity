@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - Funcity</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        figure {
+            margin: 15px;
+            text-align: center;
+        }
+        figure img {
+            max-width: 200px;
+            border-radius: 5px;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        #contact-us {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .additional-text {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Booking Confirmation</h1>
+    </header>
+
+    <main>
+        <section id="confirmation">
+            <h2 style="color: red;">Thank You for Booking!</h2>
+            <p id="confirmationMessage" style="color: blue; font-weight: bold;"></p>
+            <h3 style="color: rgb(0, 128, 6);">Enjoy Our Exciting Games!</h3>
+        </section>
+
+        <section id="gallery">
+            <h2 style="text-align: center; font-family: 'Arial', sans-serif; font-size: 2em;">Our Attractions</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="virtrual.jpg" alt="Virtual Game">
+                    <figcaption style="font-family: 'Georgia', serif; font-weight: bold;">Virtual Game<br>Join the fun!</figcaption>
+                    <p class="additional-text" style="font-family: 'Verdana', sans-serif;">Experience the best in virtual entertainment.</p>
+                </figure>
+                <figure>
+                    <img src="bowling.jpg" alt="Bowling Alley">
+                    <figcaption style="font-family: 'Georgia', serif; font-weight: bold;">Bowling Alley<br>Strike it big!</figcaption>
+                    <p class="additional-text" style="font-family: 'Verdana', sans-serif;">Perfect your strike in our modern bowling alley.</p>
+                </figure>
+                <figure>
+                    <img src="laser tag.jpg" alt="Laser Tag Arena">
+                    <figcaption style="font-family: 'Georgia', serif; font-weight: bold;">Laser Tag Arena<br>Get ready for battle!</figcaption>
+                    <p class="additional-text" style="font-family: 'Verdana', sans-serif;">Team up and challenge your friends in laser tag.</p>
+                </figure>
+                <figure>
+                    <img src="bumper cars.jpg" alt="Bumper Cars">
+                    <figcaption style="font-family: 'Georgia', serif; font-weight: bold;">Bumper Cars<br>Crash and have fun!</figcaption>
+                    <p class="additional-text" style="font-family: 'Verdana', sans-serif;">Enjoy thrilling rides and bumper car fun!</p>
+                </figure>
+                <figure>
+                    <img src="pool table.jpg" alt="Pool Table">
+                    <figcaption style="font-family: 'Georgia', serif; font-weight: bold;">Pool Table<br>Sink those balls!</figcaption>
+                    <p class="additional-text" style="font-family: 'Verdana', sans-serif;">Challenge your friends to a game of pool.</p>
+                </figure>
+            </div>
+        </section>
+        
+
+        <section id="contact-us">
+            <h3>Contact Us</h3>
+            <p>If you have any questions or need assistance, feel free to reach out:</p>
+            <p><strong>Email:</strong> support@funcity.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 Fun Street, Playtown, PT 12345</p>
+        </section>
+    </main>
+
+    <script>
+        // Retrieve booking details from session storage
+        const name = sessionStorage.getItem('name');
+        const email = sessionStorage.getItem('email');
+        const game = sessionStorage.getItem('game');
+        const tickets = sessionStorage.getItem('tickets');
+
+        // Update confirmation message
+        document.getElementById("confirmationMessage").textContent = `
+            Thank you, ${name}! Your booking for ${tickets} ticket(s) for "${game}" has been confirmed.
+            A confirmation email has been sent to ${email}.
+        `;
+    </script>
+</body>
+</html>

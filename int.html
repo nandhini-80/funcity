@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcity Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+    <header>
+        <h1>Welcome to Funcity!</h1>
+        <h2>Book your game tickets now and enjoy an amazing experience!</h2>
+    </header>
+
+    <main>
+        <section class="booking-form">
+            <h2>Book Your Tickets</h2>
+            <form id="ticketForm">
+                <label for="name">NAME:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">EMAIL:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="game">SELECT GAME:</label>
+                <select id="game" name="game" required>
+                    <option value="laser_tag">Laser Tag</option>
+                    <option value="bowling">Bowling</option>
+                    <option value="virtual">Virtual</option>
+                    <option value="bumper_cars">Bumper Cars</option>
+                    <option value="pool_table">Pool Table</option>
+                </select>
+
+                <label for="tickets">NUMBER OF TICKETS:</label>
+                <input type="number" id="tickets" name="tickets" min="1" max="10" required>
+
+                <button type="submit">BOOK NOW</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Funcity Game Center. All rights reserved.</p>
+    </footer>
+
+    <script src="h.js"></script>
+</body>
+</html>
